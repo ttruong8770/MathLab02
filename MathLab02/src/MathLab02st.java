@@ -31,12 +31,14 @@ public class MathLab02st
 
 class Rational
 {
-		private int num, den;
+		private int num, den, onum, oden, gcf;
 //	Rational
 	public Rational(int n, int d)
 	{
 		num = n;
 		den = d;
+		onum = n;
+		oden = d;
 	}
 //	getNum
 	public int getNum()
@@ -56,8 +58,7 @@ class Rational
 //	getRational 
 	public String getRational()
 	{
-		double gcf = getGCF(num,den);
-		return (num/gcf) + "/" + (den/gcf);
+		return num + "/" + den;
 	}
 //	getOriginal
 	public String getOriginal() 
@@ -65,7 +66,13 @@ class Rational
 		return (num)+"/"+(den);
 	}
 //	reduce
-
+	public void reduce()
+	{
+		int gcf = getGCF(onum,oden);
+		num = onum/gcf;
+		den = oden/gcf;
+	}
+	
 	private int getGCF(int n1,int n2)
 	{
 		int rem = 0;
