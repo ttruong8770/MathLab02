@@ -27,7 +27,7 @@ public class MathLab02st
 	}
 }
 
-				
+				// something
 
 class Rational
 {
