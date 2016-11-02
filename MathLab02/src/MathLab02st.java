@@ -39,6 +39,7 @@ class Rational
 		den = d;
 		onum = n;
 		oden = d;
+		reduce();
 	}
 //	getNum
 	public int getNum()
@@ -63,7 +64,7 @@ class Rational
 //	getOriginal
 	public String getOriginal() 
 	{
-		return (num)+"/"+(den);
+		return onum+"/"+oden;
 	}
 //	reduce
 	public void reduce()
